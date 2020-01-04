@@ -43,7 +43,7 @@ class ViewController: NSViewController, NSTableViewDelegate {
         let openPanel = NSOpenPanel()
         openPanel.allowedFileTypes = ["mp3", "plist"]
         openPanel.beginSheetModal(for: self.view.window!) { (response) in
-            print(openPanel.url?.lastPathComponent)
+            print(openPanel.url?.lastPathComponent as Any)
             self.textField.stringValue = openPanel.url!.lastPathComponent
         }
     }
